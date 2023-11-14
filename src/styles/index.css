@@ -12,15 +12,20 @@
 */
 body{
     margin-top: 100px;
+    background-color: rgb(226, 223, 223)214, 211, 211);
 }
 ul{
     padding:0;
     margin-bottom: 0;
 }
 ul li{
-    border: 1px solid grey;
+    border: 1px solid rgb(167, 166, 166);
     list-style: none;
-    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -1px;
 }
 h1{
     text-align: center;
@@ -28,11 +33,59 @@ h1{
 input{
     border: none;
     width: 100%;
+    
 }
 .faIcon{
-    margin-left: 2px;
+   
+    margin-left: 7px;
+    font-size: large;
     
 }
 .faIcon:hover {
-    border: 1px solid #ff0000; /* Adjust the border properties as needed */
+    border: 1px solid #ff0000; 
+
   }
+
+.container {
+    width: 900px;
+}
+.task {
+    border: 1px solid rgb(167, 166, 166);
+    padding-left: 15px;
+    padding-right: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: -1px;
+    color: rgb(163, 163, 163);
+    
+   
+}
+
+.page {
+    border: 1px solid rgb(167, 166, 166);
+    height: 5px;
+    width: 870px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1px;
+}
+.page2 {
+    border: 1px solid rgb(167, 166, 166);
+    height: 5px;
+    width: 860px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1px;
+}
+.shadow {
+    box-shadow: -5px -5px 10px grey;
+}
+h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 100px;
+    color: rgb(255, 229, 180);
+    -webkit-text-stroke: 1px #000; 
+    text-stroke: 1px #000;
+}

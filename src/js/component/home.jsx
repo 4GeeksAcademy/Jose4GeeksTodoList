@@ -8,39 +8,44 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1>My Todos</h1>
-      <ul>
-        <li>
-          <input
-            type="text"
-            placeholder="What do you need to do?"
-            onChange={(e) => setInputValue(e.target.value)}
-            value={inputValue}
-            onKeyPress={(e) => {
-              if (e.key === "Enter") {
-                setTodos(todos.concat(inputValue));
-                setInputValue("");
-              }
-            }}
-          />
-        </li>
-        {todos.map((item, index) => (
-          <li key={index}>
-            {item}
-            <FontAwesomeIcon
-              icon={faX}
-              onClick={() =>
-                setTodos(
-                  todos.filter((t, currentIndex) => index !== currentIndex)
-                )
-              }
-              style={{ color: "#ff0000" }}
-			  className="faIcon"
+      <h1>todos</h1>
+      <div className="shadow">
+        <ul>
+          <li className="textBox">
+            <input
+              type="text"
+              placeholder="What do you need to do?"
+              onChange={(e) => setInputValue(e.target.value)}
+              value={inputValue}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  setTodos(todos.concat(inputValue));
+                  setInputValue("");
+                }
+              }}
             />
           </li>
-        ))}
-      </ul>
-      <div>{todos.length} tasks</div>
+          {todos.map((item, index) => (
+            <li key={index}>
+              {item}
+              <FontAwesomeIcon
+                icon={faX}
+                onClick={() =>
+                  setTodos(
+                    todos.filter((t, currentIndex) => index !== currentIndex)
+                  )
+                }
+                style={{ color: "#ff0000" }}
+          className="faIcon"
+              />
+            </li>
+          ))}
+        </ul>
+        <div className="task">{todos.length} tasks left</div>
+        </div>
+        
+        <div className="page"></div>
+        <div className="page2"></div>
     </div>
   );
 };
